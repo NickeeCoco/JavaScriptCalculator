@@ -1,0 +1,264 @@
+/* Morgane Bentzinger - 261062953 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #003333;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: #ff0000;
+    transition: background-color 1500ms;
+}
+
+/* NAVIGATION */
+nav ul {
+    height: calc(2.2rem + 1.5rem + 1em);
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+
+    background-color: #003333;
+}
+
+nav li {
+    color: white;
+    font-weight: bold;
+    padding: 1.5rem 3rem;
+    align-self: flex-end;
+    transition: padding .5s ease-in;
+}
+
+nav li:hover {
+    padding-bottom: 2.2rem;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.orange {
+    background-color: #ff8c00;
+}
+
+.yellow {
+    background-color: #cccc00;
+}
+
+.green {
+    background-color: #008000;
+}
+
+.blue {
+    background-color: #0000ff;
+}
+
+.indigo {
+    background-color: #4b0082;
+}
+
+.violet {
+    background-color: #800080;
+}
+
+/* CALCULATOR */
+.calculator {
+    width: fit-content;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 60px 80px 80px 80px 80px 80px;
+    grid-template-areas:
+        "screen screen screen screen"
+        "clear clear clear divide"
+        "seven eight nine multiply"
+        "four five six substract"
+        "one two three add"
+        "zero period equals modulo";
+    gap: 20px 10px;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.screen {
+    grid-area: screen;
+    background-color: #00fa9a;
+    box-shadow: inset 0px 0px 13px 5px rgba(0, 0, 0, 0.63);
+    padding: 0 1rem;
+    letter-spacing: 0.18em;
+    font-weight: bold;
+    text-align: right;
+    line-height: 60px;
+    color: white;
+}
+
+.text {
+    display: inline-block;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.add {
+    grid-area: add;
+}
+
+.substract {
+    grid-area: substract;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.modulo {
+    grid-area: modulo;
+}
+
+.period {
+    grid-area: period;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.clear {
+    grid-area: clear
+}
+
+.btn {
+    color: white;
+    font-size: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 80px;
+    box-shadow: 2px -75px 0px -70px rgba(255, 255, 255, 0.3) inset;
+    width: 100%;
+    height: 100%;
+    transition: all .5s, box-shadow 0s;
+}
+
+.btn:active {
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.75) inset, 2px -75px 0px -70px rgba(255, 255, 255, 0.3) inset;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.clear:hover {
+    transform: scale(1.1);
+}
+
+.black-btn {
+    background-color: #000000;
+}
+
+.gray-btn {
+    background-color: #333333;
+}
